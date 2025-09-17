@@ -1,25 +1,58 @@
-<header>
-    <img src="assets/svg/logo-vox-red.svg" alt="">
+<div class="container-page">
+  <header>
+    <img class="logo-vox" src="assets/svg/logo-vox-red.svg" alt="" />
     <div class="container-select-options">
-        <p class="text-select-option">
-            Vini, o que você deseja fazer
-        </p>
-       <nav>
-        <app-button-nav></app-button-nav>
-       </nav>
+      <div class="text-select-option">
+        <span class="text-welcome">Seja Bem-vindo</span>
+        <p>Vini, o que você deseja fazer ?</p>
+      </div>
+      <nav class="select-options">
+        <app-button-nav [type]="'startVoting'"></app-button-nav>
+        <app-button-nav [type]="'addSection'"></app-button-nav>
+        <app-button-nav [type]="'trackVoting'"></app-button-nav>
+        <app-button-nav [type]="'authorizeVoting'"></app-button-nav>
+      </nav>
     </div>
-</header>
+  </header>
 
-<main>
-    <section class="created-section">
-       
+  <main>
+    <section class="container-created-section">
+      <p class="name-section">sessões criadas</p>
+      <div class="sections">
+        <app-button-group [textButton]="'grêmio'"> </app-button-group>
+        <app-button-group [textButton]="'grêmio'"> </app-button-group>
+        <app-button-group [textButton]="'grêmio'"> </app-button-group>
+        <app-button-group [textButton]="'grêmio'"> </app-button-group>
+        <app-button-group [textButton]="'grêmio'"> </app-button-group>
+        <app-button-group [textButton]="'grêmio'"> </app-button-group>
+        <app-button-group [textButton]="'grêmio'"> </app-button-group>
+      </div>
+      <app-button-simple [type]="'seeSection'" [text]="'ver sessões'"></app-button-simple>
     </section>
 
     <section class="result-history">
+      <p class="name-section">histórico de resultados</p>
+      <div class="results">
+        <app-card-result></app-card-result>
+        <app-card-result></app-card-result>
+      </div>
 
+      <app-button-simple (click)="navigateToHistory()" [type]="'seeResults'" [text]="'ver histórico'"></app-button-simple>
     </section>
-</main>
+  </main>
 
-<footer>
-    
-</footer>
+  <footer>
+    <div class="container-img-footer">
+      <img src="assets/svg/default-icon-user-grey.svg" alt="" />
+    </div>
+    <div class="container-controls">
+      <p>Bota na Boca Bota na Cara</p>
+      <div class="controls">
+        <img src="assets/svg/list-icon-dark-grey.svg" alt="" srcset="" />
+        <img src="assets/svg/settings-icon-dark-grey.svg" alt="" srcset="" />
+        <img src="assets/svg/doubt-icon-dark-grey.svg" alt="" srcset="" />
+        <img src="assets/svg/exit-icon-light-grey.svg" alt="" srcset="" />
+      </div>
+    </div>
+  </footer>
+</div>

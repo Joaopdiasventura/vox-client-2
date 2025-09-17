@@ -1,0 +1,82 @@
+@use '../../../../styles/variables.scss' as v;
+
+:host {
+  width: 100%;
+}
+
+aside {
+  padding: 1rem 0rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-weight: 500;
+  width: 100%;
+  max-width: 300px;
+
+  header {
+    width: 100%;
+    .button-improve {
+      background-color: v.$color-accent-600;
+      color: white;
+      padding: 1.4rem 0rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      width: 100%;
+      text-align: center;
+      text-decoration: underline;
+      position: relative;
+      cursor: pointer;
+      span {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+
+      img:nth-of-type(1),
+      img:nth-of-type(2) {
+        position: absolute;
+        margin-top: -10px;
+        width: 45px;
+        z-index: 1;
+        opacity: 0.3;
+      }
+
+      img:nth-of-type(1) {
+        left: 0;
+        transform: rotate(-20deg);
+      }
+      img:nth-of-type(2) {
+        right: 0;
+        transform: rotate(20deg);
+      }
+    }
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      cursor: pointer;
+      padding: 1.4rem 0rem;
+      background-color: v.$default-color-white;
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 4px;
+
+      .icon-button {
+        width: 30px;
+        height: 30px;
+        margin-right: 0.5rem;
+        margin-left: 1rem;
+      }
+      .icon-arrow {
+        position: absolute;
+        right: 1rem;
+      }
+    }
+  }
+}
