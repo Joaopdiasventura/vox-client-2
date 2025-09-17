@@ -37,6 +37,10 @@
           },
           "configurations": {
             "production": {
+              "define": {
+                "API_URL": "'https://23493btogd.execute-api.sa-east-1.amazonaws.com'",
+                "ENVIRONMENT": "'prod'"
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -52,6 +56,10 @@
               "outputHashing": "all"
             },
             "development": {
+               "define": {
+                "API_URL": "'http://localhost:3000'",
+                "ENVIRONMENT": "'dev'"
+              },
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
@@ -92,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "392c02d9-1a97-4e2d-977d-ec4881feb4d7"
   }
 }
