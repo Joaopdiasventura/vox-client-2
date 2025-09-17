@@ -1,0 +1,11 @@
+@use '../../../../../styles/variables.scss' as v;
+
+.container-group {
+  background-color: white;
+  width: fit-content;
+  font-weight: 600;
+  padding: 1rem 4rem;
+  font-size: 1.05rem;
+  color: v.$dominant-color-100;
+  border-radius: 0.5rem;
+}
