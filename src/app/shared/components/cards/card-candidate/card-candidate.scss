@@ -1,0 +1,60 @@
+@use '../../../../../styles/variables.scss' as v;
+@use '../../../../../styles/mixins.scss' as m;
+
+
+
+.card-candidate{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10%;
+    justify-content: space-between;
+
+    .container-img{
+        background-color: v.$color-accent-600 ;
+        width: 100%;
+        max-width:100px;
+        height: 100%;
+        max-height: 100px;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        justify-content: center;
+
+        img{
+            max-width: 40px;
+            width: 100%;
+        }
+    }
+
+    .container-candidate{
+      flex: 1 2 0px;
+      background-color: v.$dominant-color-1000;
+      padding: 1rem;
+      height: 100%;
+      p{
+        color: white;
+        
+        @include m.overflow-ellipsis
+      }
+    }
+
+    .container-quantity-vote{
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        background-color: v.$default-color-white;
+        font-size: 1.4rem;
+        padding: 1rem;
+        font-weight: 500;
+        color: v.$color-accent-500;
+        white-space: nowrap;
+        width: 100%;
+        max-width: 200px;
+
+        img{
+            max-width: 60px;
+            width: 100%;
+        }
+    }
+}
