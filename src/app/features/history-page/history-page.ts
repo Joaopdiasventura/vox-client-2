@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CardResult } from "../../shared/components/cards/card-result/card-result";
+import { CardGroup } from '../../shared/components/cards/card-group/card-group';
 
 @Component({
   selector: 'app-history-page',
-  imports: [CardResult],
+  imports: [CardGroup],
   templateUrl: './history-page.html',
   styleUrl: './history-page.scss'
 })

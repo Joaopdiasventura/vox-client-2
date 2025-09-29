@@ -12,5 +12,6 @@ export const serverRoutes: ServerRoute[] = [
   {
     path:'view',
     renderMode: RenderMode.Server
-  }
+  },
+
 ];

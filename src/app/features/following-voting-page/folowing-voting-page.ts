@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VotingInput } from '../../shared/components/local/voting-input/voting-input/voting-input'
+import { VotingInput } from '../../shared/components/inputs/voting-input/voting-input'
 
 @Component({
   selector: 'app-folowing-voting-page',

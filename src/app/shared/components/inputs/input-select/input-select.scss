@@ -1,0 +1,70 @@
+@use '../../../../../styles/variables.scss' as v;
+@use '../../../../../styles/mixins.scss' as m;
+
+.container-input-select {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid v.$dominant-color-100;
+    font-size: 1.05rem;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-bottom: 2px solid v.$color-accent-500;
+
+      + .icon {
+        color: v.$color-accent-500;
+        fill: v.$color-accent-500;
+      }
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 0.5rem;
+    color: v.$dominant-color-1000;
+  }
+}
+
+.container-options {
+  background-color: white;
+  border-radius: 4px;
+  position: relative;
+  z-index: 10;
+
+  &.hidden {
+    display: none;
+  }
+
+  &.visible {
+    display: block;
+  }
+
+  .options {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .option {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      &:hover {
+        background-color: v.$dominant-color-50;
+      }
+    }
+  }
+}
