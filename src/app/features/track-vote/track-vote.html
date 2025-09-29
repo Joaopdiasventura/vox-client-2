@@ -1,2 +1,16 @@
-
+@if(!idGroup){
 <app-input-select></app-input-select>
+} @else{
+
+<div class="header-results">
+    <img src="assets/svg/reload-icon-red.svg" alt="icone de reload" srcset="">
+  <app-card-group [typeCard]="'update'"></app-card-group>
+</div>
+<div class="container-results">
+  <app-card-candidate></app-card-candidate>
+  <app-card-candidate></app-card-candidate>
+  <app-card-candidate></app-card-candidate>
+  <app-card-candidate></app-card-candidate>
+  <app-card-candidate></app-card-candidate>
+</div>
+}

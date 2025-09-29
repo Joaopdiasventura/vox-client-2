@@ -1,5 +1,39 @@
-.container-results{
+@use '../../../styles/variables.scss' as v;
+@use '../../../styles/mixins.scss' as m;
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.container-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .header-table {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    justify-content: space-between;
+
+    p {
+      background-color: v.$default-color-white;
+      text-align: center;
+      font-weight: 500;
+      padding: 0.5rem;
+      text-transform: uppercase;
+    }
+    .image-header {
+      width: 100%;
+      max-width: 100px;
+    }
+    .name-header {
+      flex: 1 2 0px;
+      max-width: 300px;
+    }
+    .votes-header {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
 }

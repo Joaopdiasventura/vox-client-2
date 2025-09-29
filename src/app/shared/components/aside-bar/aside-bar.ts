@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router} from '@angular/router';
 import { inject } from '@angular/core';
+import{ ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-aside-bar',
   imports: [],
@@ -9,8 +10,13 @@ import { inject } from '@angular/core';
 })
 export class AsideBar {
 private route = inject(Router);
+private activeRoute = inject(ActivatedRoute);
+public idGroup!:string |null;
 
 public navigateToHome():void{
   this.route.navigate(['']);
+}
+public navigateToTrackVoting():void{
+  this.route.navigate(['view/track-vote']);
 }
 }

@@ -1,0 +1,69 @@
+<ng-container [ngTemplateOutlet]="cardTemplate() ?? null"></ng-container>
+
+<ng-template #cardGroup>
+  <article
+    class="card-result"
+    [ngStyle]="{ 'justify-content': typeCard === 'group' ? 'left' : 'space-between' }"
+  >
+    <div class="container-image">
+      <img src="assets/svg/default-icon-group-grey.svg" alt="" srcset="" />
+    </div>
+    <div
+      [ngStyle]="{ 'margin-left': typeCard === 'group' ? '1rem' : '0rem' }"
+      class="container-text"
+    >
+      <p class="text-result">Grêmio 2 x 0 Inter</p>
+      <span class="date-result">10/06/2024</span>
+    </div>
+  </article>
+</ng-template>
+
+<ng-template #cardGroupResult>
+  <article
+    class="card-result"
+    [ngStyle]="{ 'justify-content': typeCard === 'group' ? 'left' : 'space-between' }"
+  >
+    <div class="container-image">
+      <img src="assets/svg/default-icon-group-grey.svg" alt="" srcset="" />
+    </div>
+    <div
+      [ngStyle]="{ 'margin-left': typeCard === 'group' ? '1rem' : '0rem' }"
+      class="container-text"
+    >
+      <p class="text-result">Grêmio 2 x 0 Inter</p>
+      <span class="date-result">10/06/2024</span>
+    </div>
+
+    <div class="container-info">
+      <div class="container-quantity-votes">
+        <img src="assets/svg/trophy-red.svg" alt="" />
+        <span class="quantity-votes">150 votos</span>
+      </div>
+      <div class="badget">
+        <span class="text-badget">Mamonas Assasinas AJBSAHDEDFSZYHI</span>
+      </div>
+    </div>
+  </article>
+</ng-template>
+
+<ng-template #cardGroupUpdate>
+  <article
+    class="card-result"
+    [ngStyle]="{ 'justify-content': typeCard === 'group' ? 'left' : 'space-between' }"
+  >
+    <div class="container-image">
+      <img src="assets/svg/default-icon-group-grey.svg" alt="" srcset="" />
+    </div>
+    <div
+      [ngStyle]="{ 'margin-left': typeCard === 'group' ? '1rem' : '0rem' }"
+      class="container-text"
+    >
+      <p class="text-result">Grêmio 2 x 0 Inter</p>
+    </div>
+
+    <div class="container-update">
+      <p class="date">Última atualização: 10/06/2024</p>
+      <p class="time">23:00</p>
+    </div>
+  </article>
+</ng-template>

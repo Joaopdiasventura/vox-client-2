@@ -33,11 +33,15 @@
     <section class="result-history">
       <p class="name-section">histórico de resultados</p>
       <div class="results">
-        <app-card-result></app-card-result>
-        <app-card-result></app-card-result>
+        <app-card-group [typeCard]="'result'"></app-card-group>
+        <app-card-group [typeCard]="'result'"></app-card-group>
       </div>
 
-      <app-button-simple (click)="navigateToHistory()" [type]="'seeResults'" [text]="'ver histórico'"></app-button-simple>
+      <app-button-simple
+        (click)="navigateToHistory()"
+        [type]="'seeResults'"
+        [text]="'ver histórico'"
+      ></app-button-simple>
     </section>
   </main>
 
