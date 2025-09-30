@@ -1,0 +1,22 @@
+<div class="container-input-select">
+  <input type="text" (click)="onClickInput()" [value]="inputValue" [placeholder]="placeholder" />
+
+  <div class="icon">
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M0 8.43279L1.99965 10.5406L8 4.21565L14.0004 10.5406L16 8.43279L8 0L0 8.43279ZM0 15.5672L1.99965 13.4594L8 19.7843L14.0004 13.4594L16 15.5672L8 24L0 15.5672Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+</div>
+
+<div class="container-options" [ngClass]="isOptionsVisible ? 'visible' : 'hidden'">
+  <ul class="options">
+    <li class="option" (click)="onClickOption('Option 1')">Option 1</li>
+    <li class="option" (click)="onClickOption('Option 2')">Option 2</li>
+    <li class="option" (click)="onClickOption('Option 3')">Option 3</li>
+    <li class="option" (click)="onClickOption('Option 4')">Option 4</li>
+    <li class="option" (click)="onClickOption('Option 5')">Option 5</li>
+  </ul>
+</div>
