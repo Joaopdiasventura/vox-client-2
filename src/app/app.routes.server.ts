@@ -13,5 +13,8 @@ export const serverRoutes: ServerRoute[] = [
     path:'view',
     renderMode: RenderMode.Server
   },
-
+  {
+    path:'voting-page/:id',
+    renderMode: RenderMode.Server
+  }
 ];

@@ -16,7 +16,11 @@ public idGroup!:string |null;
 public navigateToHome():void{
   this.route.navigate(['']);
 }
+public navigateToStartVotingPage():void{
+  this.route.navigate(['view/start-voting']);
+}
 public navigateToTrackVoting():void{
   this.route.navigate(['view/track-vote']);
 }
+
 }

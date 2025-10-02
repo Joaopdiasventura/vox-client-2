@@ -1,0 +1,35 @@
+@use '../../../../../styles/variables.scss' as v;
+@use '../../../../../styles/mixins.scss' as m;
+input {
+  display: none;
+
+  &:checked + label {
+    .container-checkbox {
+      background-color: v.$color-accent-500;
+      border: 2px solid v.$color-accent-500;
+    }
+  }
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid v.$dominant-color-200;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  .container-checkbox {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid v.$dominant-color-200;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  p {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,34 @@
+@use '../../../../styles/variables.scss' as v;
+@use '../../../../styles/mixins.scss' as m;
+
+header {
+  margin-top: 1.5rem;
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-weight: 600;
+  }
+}
+
+main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .options {
+    margin-top: 2rem;
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  app-button-outline {
+    margin: auto;
+  }
+}

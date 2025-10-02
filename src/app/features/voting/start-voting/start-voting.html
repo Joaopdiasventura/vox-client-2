@@ -1,0 +1,27 @@
+<div class="container-content">
+  <div class="container-controls">
+    <div class="container-input">
+      <label>Escolha a sessão de votação</label>
+      <app-input-select></app-input-select>
+    </div>
+    <app-card-group [typeCard]="'group'"></app-card-group>
+    <div class="container-status">
+      <p>status da sessão de votação</p>
+    </div>
+
+    <div class="container-input">
+      <label>Deseja adicionar voto nulo na votação ?</label>
+      <app-checkbox [id]="'votoNulo'" [label]="'Adcionar voto nulo'"></app-checkbox>
+    </div>
+    <app-button-outline [text]="'iniciar votação'"></app-button-outline>
+  </div>
+
+  <div class="container-qr-code">
+    <div class="qr-code">
+
+    </div>
+    <div class="code">
+        <p>XXXX-XXXX</p>
+    </div>
+  </div>
+</div>

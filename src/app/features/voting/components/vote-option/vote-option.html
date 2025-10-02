@@ -1,0 +1,36 @@
+<div class="option">
+  <div
+    class="container-img"
+    [ngStyle]="{ 'background-color': type === 'candidato' ? '#860909' : '#777777' }"
+  >
+    @if(type === 'candidato'){
+    <img src="assets/svg/default-icon-user-grey.svg" alt="" srcset="" />
+
+    }@else{
+    <img src="assets/svg/dots-icon-white.svg" alt="" srcset="" />
+
+    }
+  </div>
+
+  <div class="container-candidate">
+    @if(type === 'candidato'){
+    <p>{{ optionText }}</p>
+    }@else{
+    <p>voto nulo</p>
+    }
+  </div>
+
+  <svg
+    class="check-icon"
+    width="67"
+    height="56"
+    viewBox="0 0 67 56"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M21.991 56L0 33.6216L10.0217 23.4234L21.991 35.6396L56.9783 0L67 10.1982L21.991 56Z"
+      fill="currrentColor"
+    />
+  </svg>
+</div>

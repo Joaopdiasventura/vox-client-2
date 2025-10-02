@@ -1,0 +1,20 @@
+@use '../../../../../styles/variables.scss' as v;
+
+.button-authorized {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 5px solid v.$color-accent-500;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  .authorized-icon {
+    width: 40px;
+    height: 40px;
+  }
+  p {
+    color: v.$color-accent-500;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}
