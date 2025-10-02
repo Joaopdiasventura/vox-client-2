@@ -40,8 +40,9 @@
 .container-options {
   background-color: white;
   border-radius: 4px;
-  position: relative;
+  position: absolute;
   z-index: 10;
+  width: 100%;
 
   &.hidden {
     display: none;

@@ -4,10 +4,14 @@ input {
   display: none;
 
   &:checked + label {
+     border-bottom: 2px solid v.$color-accent-500;
     .container-checkbox {
       background-color: v.$color-accent-500;
       border: 2px solid v.$color-accent-500;
     }
+      p {
+    color: v.$color-accent-500;
+  }
   }
 }
 
