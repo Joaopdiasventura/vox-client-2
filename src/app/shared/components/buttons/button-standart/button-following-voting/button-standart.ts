@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-button-following-voting',
+  selector: 'app-button-standart',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './button-following-voting.html',
-  styleUrls: ['./button-following-voting.scss']
+  templateUrl: './button-standart.html',
+  styleUrls: ['./button-standart.scss']
 })
-export class ButtonFollowingVoting {
+export class ButtonStandart {
   @Input() type!: string;
   @Input() text!: string;
 
@@ -16,5 +16,6 @@ export class ButtonFollowingVoting {
   public iconPath : Record<string, string> = {
     allowVote: 'assets/svg/allow-vote-red.svg',
     stopVoting: 'assets/svg/stop-voting-gray.svg',
+    addButton: 'assets/svg/authorize-voting-red.svg',
   };
 }

@@ -1,0 +1,80 @@
+@use '../../../../../styles/variables.scss' as v;
+
+.title {
+  font-family: 'Quicksand';
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  height: 100%;
+  max-height: 73px;
+}
+
+.container-data {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 37px;
+    height: 37px;
+  }
+
+  p {
+    font-family: 'Quicksand';
+    font-size: 12px;
+    font-weight: 500;
+    color: v.$dominant-color-200;
+  }
+}
+
+.component-container {
+  padding-top: 4rem;
+}
+
+.extra-container {
+  background-color: v.$color-accent-600;
+  color: white;
+  padding: 1.4rem 0rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 274px;
+  height: 100%;
+  max-height: 73px;
+  text-align: center;
+  text-decoration: underline;
+  position: relative;
+  cursor: pointer;
+
+  span {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  img:nth-of-type(1),
+  img:nth-of-type(2) {
+    position: absolute;
+    margin-top: -15px;
+    width: 45px;
+    z-index: 1;
+    opacity: 0.3;
+  }
+
+  img:nth-of-type(1) {
+    left: 0;
+    transform: rotate(-20deg);
+  }
+
+  img:nth-of-type(2) {
+    right: 0;
+    transform: rotate(20deg);
+  }
+}

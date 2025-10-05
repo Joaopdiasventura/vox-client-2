@@ -1,0 +1,22 @@
+<div class="component-container">
+    <h1 class="title">{{title}}</h1>
+    <article class="card">
+        <div class="container-data">
+            <img src="assets/svg/authorize-voting-red.svg" alt="" />
+            <p>VOTOS PERMITIDOS: {{allowedVote}}</p>
+        </div>
+        <div class="container-data">
+            <img src="assets/svg/authorize-voting-red.svg" alt="" />
+            <p>DISPOSITIVOS DE URNA/MONITORAMENTO: {{ballotBoxDevice}}</p>
+        </div>
+        <div class="container-data">
+            <img src="assets/svg/authorize-voting-red.svg" alt="" />
+            <p>VOTO NULO: {{nullVoteString}}</p>
+        </div>
+        <div class="extra-container" *ngIf="showExtraContainer">
+            <img src="assets/svg/vote-icon-white.svg" alt="" srcset="" />
+            <img src="assets/svg/vote-icon-white.svg" alt="" srcset="" />
+            <p>MELHORE O STATUS!</p>
+        </div>
+    </article>
+</div>

@@ -1,0 +1,55 @@
+@use '../../../../../styles/variables.scss' as v;
+@use '../../../../../styles/mixins.scss' as m;
+
+:host {
+  width: 100%;
+  max-width: 700px;
+}
+
+.card {
+  background-color: v.$default-color-white;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+  padding-left: 1.5rem;
+
+  .container-image {
+    background-color: v.$color-accent-500;
+
+    img {
+      width: 80px;
+      height: 80px;
+      padding: 0.5rem;
+    }
+  }
+
+  .container-text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    flex: 1; 
+
+    .text-result {
+      color: v.$default-color-black;
+      font-size: 24px;
+      font-family: 'Quicksand';
+      font-weight: bold;
+      @include m.overflow-ellipsis;
+    }
+  }
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: 0;
+  width: 5px;
+  background-color: v.$color-accent-500;
+  border-radius: 5px;
+}

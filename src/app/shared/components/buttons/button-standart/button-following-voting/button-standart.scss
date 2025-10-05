@@ -5,12 +5,12 @@
   flex-direction: column; 
   align-items: center;
   gap: 5rem; 
+  margin-top: 5rem;
 }
 
 button {
   position: relative;
   display: flex;
-  margin-top: 6rem;
   align-items: center;
   padding-left: 1.5rem; 
   width: 100%;
@@ -53,6 +53,16 @@ button {
 
     &:hover {
       background-color: v.$dominant-color-1000;
+      color: white;
+    }
+  }
+
+    &.addButton {
+    border-color: v.$color-accent-500;
+    span { color: v.$color-accent-500; }
+
+    &:hover {
+      background-color: v.$color-accent-500;
       color: white;
     }
   }

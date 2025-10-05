@@ -1,0 +1,57 @@
+@use '../../../../../styles/variables.scss' as v;
+@use '../../../../../styles/mixins.scss' as m;
+
+.title{
+    font-family: 'Quicksand';
+    font-size: 24px;       
+    font-weight: bold;     
+    margin-bottom: 20px;   
+    color: black;           
+}
+
+:host {
+  width: 100%;
+  max-width: 700px;
+}
+
+.card {
+  background-color: v.$default-color-white;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+
+  .container-image {
+    background-color: v.$color-accent-500;
+
+    img {
+      width: 80px;
+      height: 80px;
+      padding: 0.5rem;
+    }
+  }
+
+  .container-text {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    flex: 1; 
+
+    .name-img {
+      color: v.$dominant-color-200;
+      font-size: 20px;
+      font-family: 'Quicksand';
+      font-weight: medium;
+      text-align: left;
+      padding-left: 2rem;
+      @include m.overflow-ellipsis;
+    }
+  }
+}
+
+.component-container{
+  padding-top: 4rem;
+}
