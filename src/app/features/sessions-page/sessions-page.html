@@ -1,7 +1,0 @@
-<div>
-    <app-card-candidate-list  *ngFor="let card of visibleCards" [image]="card.image" [groupName]="card.groupName"
-        [participant]="card.participant"></app-card-candidate-list>
-    <app-button-page [previousPage]="previousPageNumber" [nextPage]="nextPageNumber" (previousClicked)="prevPage()"
-        (nextClicked)="nextPage()">
-    </app-button-page>
-</div>

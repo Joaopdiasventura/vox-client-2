@@ -1,0 +1,36 @@
+<div class="auth-container">
+
+    <div class="logo-vox">
+        <img src="assets/svg/logo-vox-red.svg" />
+    </div>
+
+    <div class="mode-toggle">
+        <button [ngClass]="{ active: mode === 'signin' }" (click)="setMode('signin')">
+            LOGIN
+        </button>
+        <button [ngClass]="{ active: mode === 'signup' }" (click)="setMode('signup')">
+            CADASTRAR
+        </button>
+    </div>
+
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+
+        <div *ngIf="mode === 'signup'">
+            <input type="text" name="userName" placeholder="Digite seu nome" [(ngModel)]="formData.userName" class="input-with-icon" required />
+        </div>
+
+        <div>
+            <input type="email" name="email" placeholder="Digite seu email" [(ngModel)]="formData.email" class="input-with-icon" required />
+        </div>
+
+        <div>
+            <input type="password" name="password" placeholder="Digite sua senha" [(ngModel)]="formData.password" class="input-with-icon" required />
+            <p *ngIf="mode === 'signup'">Digite uma senha com ao menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos</p>
+            <p type="forgotPassword" *ngIf="mode === 'signin'">Esqueceu a senha?</p>
+        </div>
+
+        <button type="submit">
+            {{ mode === 'signin' ? 'ENTRAR' : 'CADASTRAR' }}
+        </button>
+    </form>
+</div>

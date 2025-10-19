@@ -1,17 +1,17 @@
 <div class="component-container">
     <article class="card">
         <div class="container-image">
-            <img [src]="image" alt="" />
+            <img [src]="image" [ngClass]="typeImage" alt="" />
         </div>
         <div class="container-text">
-            <p>{{groupName}}</p>
+            <p>{{name}}</p>
             <span>{{participant}}</span>
         </div>
         <div class="container-gear">
             <img src="assets/svg/gear-icon-grey.svg" />
         </div>
     </article>
-    <div class="container-see-candidate">
+    <div *ngIf="showViewBtn" class="container-see-candidate">
         <img src="assets/svg/eye-icon-white.svg" />
         <p>Ver candidatos</p>
     </div>

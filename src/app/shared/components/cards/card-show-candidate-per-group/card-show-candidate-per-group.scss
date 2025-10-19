@@ -11,12 +11,15 @@
   position: relative;
 
   .container-image {
-    background-color: v.$color-accent-500;
 
     img {
       width: 80px;
       height: 80px;
       padding: 0.5rem;
+
+      &.background {
+        background-color: v.$color-accent-500;
+      }
     }
   }
 }
