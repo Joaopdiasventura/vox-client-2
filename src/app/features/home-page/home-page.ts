@@ -4,7 +4,7 @@ import { ButtonGroup } from "../../shared/components/buttons/button-group/button
 import { CardResult } from '../../shared/components/cards/card-result/card-result';
 import { ButtonSimple } from "./components/button-simple/button-simple";
 import { Router } from '@angular/router'; 
-import { Inject } from '@angular/core';
+
 @Component({
   selector: 'app-home-page',
   imports: [ButtonNav, ButtonGroup, CardResult, ButtonSimple],
@@ -15,7 +15,7 @@ export class HomePage {
 private route = inject(Router);
 
 public navigateToHistory(): void {
-  this.route.navigate(['view','history-page']);
+  this.route.navigate(['pages','pool','history-page']);
 }
 
 }

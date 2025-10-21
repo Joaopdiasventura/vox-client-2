@@ -1,0 +1,9 @@
+<div>
+    <app-card-show-candidate-per-group image="assets\svg\default-icon-group-white.svg" groupName="Grupo Vox"
+        typeImage="background"></app-card-show-candidate-per-group>
+    <app-card-candidate-list *ngFor="let card of visibleCards" [image]="card.image" [name]="card.name"
+        [showViewBtn]="false"></app-card-candidate-list>
+    <app-button-page [previousPage]="previousPageNumber" [nextPage]="nextPageNumber" (previousClicked)="prevPage()"
+        (nextClicked)="nextPage()">
+    </app-button-page>
+</div>

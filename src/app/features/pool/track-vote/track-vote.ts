@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { InputSelect } from "../../shared/components/inputs/input-select/input-select";
+import { InputSelect } from "../../../shared/components/inputs/input-select/input-select";
 
 @Component({
   selector: 'app-track-vote',

@@ -1,0 +1,69 @@
+@use '../../../../../../styles/variables.scss' as v;
+
+.button-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 5rem; 
+  margin-top: 5rem;
+}
+
+button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem; 
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border: 4px solid;
+  border-radius: 8px;
+  font-family: 'Quicksand'; 
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+  }
+
+  span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: calc(100% - 3rem); 
+  }
+
+  &.allowVote {
+    border-color: v.$color-accent-500;
+    span { color: v.$color-accent-500; }
+
+    &:hover {
+      background-color: v.$color-accent-500;
+      color: white;
+    }
+  }
+
+  &.stopVoting {
+    border-color: v.$dominant-color-1000;
+    span { color: v.$dominant-color-1000; }
+
+    &:hover {
+      background-color: v.$dominant-color-1000;
+      color: white;
+    }
+  }
+
+    &.addButton {
+    border-color: v.$color-accent-500;
+    span { color: v.$color-accent-500; }
+
+    &:hover {
+      background-color: v.$color-accent-500;
+      color: white;
+    }
+  }
+}

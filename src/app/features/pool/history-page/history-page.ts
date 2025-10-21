@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardResult } from "../../shared/components/cards/card-result/card-result";
+import { CardResult } from "../../../shared/components/cards/card-result/card-result";
 
 @Component({
   selector: 'app-history-page',

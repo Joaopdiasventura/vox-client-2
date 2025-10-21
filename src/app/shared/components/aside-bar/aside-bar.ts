@@ -11,6 +11,6 @@ export class AsideBar {
 private route = inject(Router);
 
 public navigateToHome():void{
-  this.route.navigate(['']);
+  this.route.navigate(['home-page']);
 }
 }
